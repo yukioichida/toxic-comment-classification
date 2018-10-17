@@ -27,8 +27,11 @@ class WordEmbedding:
         """
         word_embeddings = self.load_word_embedding()
         word_count = len(vocabulary)
-        vocab_embedding = numpy.zeros((word_count, self.emb_dim))
-        for index, word in vocabulary:
-            vocab_embedding[index] = word_embeddings[word]
+        vocab_embedding = numpy.zeros((word_count+1, self.emb_dim))
+        for word, index in vocabulary.items():
+            if word in word_embeddings.vocab:
+                vocab_embedding[index] = word_embeddings[word]
+            else:
+                LOG.info("Word %s not found in embedding model" % word)
         del word_embeddings
         return vocab_embedding

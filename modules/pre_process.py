@@ -27,7 +27,6 @@ class PreProcessStage:
         for index, row in self.df.iterrows():
             # Normalizing and separate words of each sentence
             norm_sentence = self.norm_text(row['comment_text'])
-            print(norm_sentence)
             word_sentences = re.sub("[^\w]", " ", norm_sentence).split()
             sentences.append(word_sentences)
             # Creating a word dictionary

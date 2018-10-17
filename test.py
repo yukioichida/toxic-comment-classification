@@ -2,7 +2,6 @@
 
 comments = ["i know", "i think that will rain"]
 
-
 toxic = [0, 0]
 severe_toxic = [0, 0]
 obscene = [0, 0]
@@ -25,4 +24,7 @@ preprocess = PreProcessStage(df)
 preprocess.pre_process_dataset()
 print(preprocess.word_2_idx)
 print(preprocess.input_data)
-print()
+
+a = [1, 2, 3., 4]
+
+print(a[-1])
