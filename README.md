@@ -3,5 +3,5 @@ Kaggle Featured Prediction Competition to build a model that is capable to ident
 
 # Requiriments
 - Python 3.5
-- Tensorflow
-- Keras
+- Pytorch
+- Gensim
